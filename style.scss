@@ -1,0 +1,17 @@
+%body{
+
+}
+
+$bg-color: rgb(4, 12, 23);
+
+html{
+    &.wf-active{
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    body{
+        background-color: $bg-color;
+    }
+}

@@ -21,7 +21,7 @@ html {
     border-right: 2pt solid $border-dark;
     border-radius: 12px;
     padding: 12px;
-    
+
     $trans: 0.55;
     $bc: rgba(0, 0, 0, $trans);
     $v: 5px;
@@ -42,10 +42,10 @@ nav {
     width: 100%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    
+
     ul {
         display: block;
-        
+
         margin: 0 auto;
         overflow: auto;
         padding-left: 0em;
