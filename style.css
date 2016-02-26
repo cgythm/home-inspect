@@ -92,41 +92,40 @@ div.cover .masthead-nav > li {
 @media (min-width: 768px) {
   /* line 112, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .masthead {
-    position: fixed;
+    position: absolute;
     top: 0; }
-  /* line 116, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 118, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .mastfoot {
-    position: fixed;
     bottom: 0; } }
 
 @media (max-width: 768px) {
-  /* line 124, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 126, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .masthead,
   div.cover .mastfoot,
   div.cover .cover-container {
     width: 100%; } }
 
 @media (min-width: 769px) {
-  /* line 131, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 133, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .masthead,
   div.cover .mastfoot,
   div.cover .cover-container {
     width: 768px; } }
 
-/* line 145, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 147, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 div.cover .cover {
   padding: 30px; }
-  /* line 147, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 149, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .cover .btn-lg {
     padding: 10px 20px;
     font-weight: bold; }
 
-/* line 153, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 155, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 div.cover .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-/* line 159, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 161, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 .site {
   position: relative;
   min-height: 100%;
@@ -135,51 +134,52 @@ div.cover .masthead-brand {
   width: 100vw;
   padding: 30px;
   border-radius: 6px; }
-  /* line 168, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 170, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   .site > div {
     margin-left: auto;
     margin-right: auto; }
     @media (min-width: 769px) {
-      /* line 168, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+      /* line 170, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
       .site > div {
         width: 738px; } }
     @media (max-width: 768px) {
-      /* line 168, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+      /* line 170, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
       .site > div {
         width: 100%; } }
-    /* line 179, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+    /* line 181, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
     .site > div > section {
       margin-top: 15px;
       margin-bottom: 15px;
       padding: 30px;
       border-radius: 6px; }
-      /* line 180, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+      /* line 182, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
       .site > div > section:first-child {
         margin-top: 10px;
         margin-bottom: 15px; }
 
-/* line 195, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 197, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 #about {
   background-color: #173a7a; }
 
-/* line 199, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 201, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 #services {
   background-color: #7d9bd1; }
 
-/* line 203, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 205, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 #contact {
   background-color: #7d9bd1; }
 
-/* line 209, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 211, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 .g-arr a {
   width: 32px;
   height: 32px;
   display: block;
   margin: 0 auto; }
-  /* line 214, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 216, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   .g-arr a > svg {
     width: 100%;
     height: auto;
-    margin: 0 auto; }
+    margin: 0 auto;
+    fill: rgba(255, 255, 255, 0.85); }
 
 /*# sourceMappingURL=style.css.map */

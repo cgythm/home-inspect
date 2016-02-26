@@ -110,11 +110,13 @@ div.cover {
     //break points
     @media (min-width: $bp-small) {
         .masthead {
-            position: fixed;
+            //prevent scrolling the masthead
+            position: absolute;
+            //position: fixed;
             top: 0;
         }
         .mastfoot {
-            position: fixed;
+            //position: fixed;
             bottom: 0;
         }
     }
@@ -215,6 +217,8 @@ div.cover {
             width: 100%;
             height: auto;
             margin: 0 auto;
+            fill: transparentize(white, 1 - 0.85);
         }
     }
 }
+
