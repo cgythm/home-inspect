@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+CACHE:
+bootstrap/css/bootstrap.min.css
+bootstrap/css/bootstrap-theme.min.css
+bootstrap/css/iefix.css
+bootstrap/js/bootstrap.min.js
+bootstrap/js/ie10fix.js
+scripts/jquery-1.12.1.min.js
+
+NETWORK:
+*

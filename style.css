@@ -1,20 +1,20 @@
-/* line 19, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 16, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 html.wf-active,
 html.wf-active > body {
   font-family: 'Quicksand', sans-serif; }
 
-/* line 24, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 21, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 html,
 html body {
   height: 100%;
   background-color: #111d35;
   color: white; }
 
-/* line 31, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 28, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 * {
   box-sizing: border-box; }
 
-/* line 37, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 34, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 div.cover div.site-wrapper {
   display: table;
   width: 100%;
@@ -23,7 +23,10 @@ div.cover div.site-wrapper {
   min-height: 100%;
   min-height: 100vh;
   -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); }
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  background: url("imgs/foundation-crack.jpg");
+  background-position: center center;
+  background-size: cover; }
 
 /* line 48, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 div.cover div.site-wrapper-inner {
@@ -40,22 +43,27 @@ div.cover div.cover-container {
   margin-right: auto; }
 
 /* line 62, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
-div.cover div.inner {
-  padding: 32px; }
+div.cover .inner {
+  padding: 30px; }
 
-/* line 66, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 65, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 div.cover .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px; }
   @media (min-width: 768px) {
-    /* line 66, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+    /* line 65, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
     div.cover .masthead-brand {
       float: left; } }
 
-/* line 75, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+@media (min-width: 768px) {
+  /* line 73, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  div.cover .masthead-nav {
+    float: right; } }
+
+/* line 77, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 div.cover .masthead-nav > li {
   display: inline-block; }
-  /* line 77, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 79, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .masthead-nav > li > a {
     padding-right: 0;
     padding-left: 0;
@@ -65,50 +73,113 @@ div.cover .masthead-nav > li {
     /* IE8 proofing */
     color: rgba(255, 255, 255, 0.75);
     border-bottom: 2px solid transparent; }
-    /* line 89, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+    /* line 90, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
     .active > div.cover .masthead-nav > li > a,
     .active > div.cover .masthead-nav > li > a:focus,
     .active > div.cover .masthead-nav > li > a:hover {
       color: white;
       border: white; }
-    /* line 94, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+    /* line 95, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
     div.cover .masthead-nav > li > a:hover,
     div.cover .masthead-nav > li > a:focus {
       background-color: transparent;
       border-bottom-color: #a9a9a9;
       border-bottom-color: rgba(255, 255, 255, 0.25); }
+  /* line 105, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  div.cover .masthead-nav > li + li {
+    margin-left: 20px; }
 
 @media (min-width: 768px) {
-  /* line 104, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 112, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .masthead {
     position: fixed;
     top: 0; }
-  /* line 108, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  /* line 116, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
   div.cover .mastfoot {
     position: fixed;
     bottom: 0; } }
 
 @media (max-width: 768px) {
-  /* line 115, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
-  div.cover .masthead, div.cover .mastfoot, div.cover .cover-container {
+  /* line 124, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  div.cover .masthead,
+  div.cover .mastfoot,
+  div.cover .cover-container {
     width: 100%; } }
 
 @media (min-width: 769px) {
-  /* line 121, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
-  div.cover .masthead, div.cover .mastfoot, div.cover .cover-container {
+  /* line 131, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  div.cover .masthead,
+  div.cover .mastfoot,
+  div.cover .cover-container {
     width: 768px; } }
 
-@media (min-width: 992px) {
-  /* line 127, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
-  div.cover .masthead, div.cover .mastfoot, div.cover .cover-container {
-    width: 768px; } }
+/* line 145, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+div.cover .cover {
+  padding: 30px; }
+  /* line 147, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  div.cover .cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold; }
 
-/* line 133, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
-article.site {
+/* line 153, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+div.cover .masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+/* line 159, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+.site {
   position: relative;
   min-height: 100%;
   min-height: 100vh;
   width: 100%;
-  width: 100vw; }
+  width: 100vw;
+  padding: 30px;
+  border-radius: 6px; }
+  /* line 168, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  .site > div {
+    margin-left: auto;
+    margin-right: auto; }
+    @media (min-width: 769px) {
+      /* line 168, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+      .site > div {
+        width: 738px; } }
+    @media (max-width: 768px) {
+      /* line 168, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+      .site > div {
+        width: 100%; } }
+    /* line 179, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+    .site > div > section {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 30px;
+      border-radius: 6px; }
+      /* line 180, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+      .site > div > section:first-child {
+        margin-top: 10px;
+        margin-bottom: 15px; }
+
+/* line 195, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+#about {
+  background-color: #173a7a; }
+
+/* line 199, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+#services {
+  background-color: #7d9bd1; }
+
+/* line 203, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+#contact {
+  background-color: #7d9bd1; }
+
+/* line 209, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+.g-arr a {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto; }
+  /* line 214, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+  .g-arr a > svg {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */
