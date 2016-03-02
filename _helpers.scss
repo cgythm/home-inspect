@@ -1,0 +1,38 @@
+@mixin column-maker($column-count, $width: Null) {
+    -webkit-columns: $column-count;
+    -moz-columns: $column-count;
+    -moz-column-count: $column-count;
+    columns: $column-count;
+    @if $width !=Null and $column-count == auto {
+        /* Chrome, Safari, Opera prefix */
+        -webkit-column-width: $width;
+        /* Mozilla Firefox prefix */
+        -moz-column-width: $width;
+        column-width: $width;
+    }
+}
+
+@mixin mq($from: Null, $to: Null) {
+    @if $from==Null and $to==Null {
+        @content
+    }
+    @else if $from !=Null and $to==Null {
+        @media (min-width: $from) {
+            @content
+        }
+    }
+    @else if $from==Null and $to !=Null {
+        @media (max-width: $to) {
+            @content
+        }
+    }
+    @else if $from !=Null and $to !=Null {
+        $a: min($from, $to);
+        $b: max($from, $to);
+        $to: $b;
+        $from: $a;
+        @media (min-width: $from) and (max-width: $to) {
+            @content
+        }
+    }
+}
