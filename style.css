@@ -329,8 +329,13 @@ h4.slist {
   h4.slist:first-child {
     margin-top: 1.17em; }
 
-/* line 354, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+/* line 357, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
 .h3-padding-top {
   padding-top: 1.17em; }
+
+/* line 362, /Users/mxm/Projects/2k16/home-inspection-v2/style.scss */
+div.mid-spacer {
+  padding: 0.25em;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
