@@ -9,7 +9,7 @@ $color-active: white;
 $color-active-border: white;
 $color-pane-1: rgb(23, 58, 122);
 $color-pane-2: rgb(125, 155, 209);
-$color-pane-3: rgb(125, 155, 209);
+$color-pane-3: rgb(238, 238, 238);
 $base-padding: 30px;
 $padding-in-between: 20px;
 html {
@@ -38,8 +38,8 @@ svg#phone-link {
     fill: transparentize($color-fg, 1-0.75);
 }
 
-svg#home-about{
-    fill: transparentize($color-fg, 1-0.75);
+svg#home-about {
+    fill: transparentize($color-pane-3, 1-0.9);
     width: 252px;
     height: auto;
     display: block;
@@ -47,7 +47,7 @@ svg#home-about{
     transform: translateX(-12%);
 }
 
-svg#work-services{
+svg#work-services {
     fill: transparentize($color-bg, 1-0.75);
     width: 252px;
     height: auto;
@@ -56,9 +56,22 @@ svg#work-services{
     //transform: translateX(-12%);
 }
 
-svg#scrollar{
+svg#scrollar {}
 
+
+#about > section {
+    background-color: $color-pane-1;
 }
+
+#services > section {
+    background-color: $color-pane-2;
+}
+
+#contact > section {
+    background-color: mix($color-pane-1, $color-pane-1, 0%);
+    color: $color-bg;
+}
+
 
 div.cover {
     //one CSS 'type': a site-wrapper
@@ -218,7 +231,7 @@ $factor: 5) {
         margin-left: auto;
         margin-right: auto;
         @media (min-width: $bp-medium+1) {
-            width: $bp-medium - $base-padding;
+            width: $bp-medium - ($base-padding*2);
         }
         @media (max-width: $bp-medium) {
             width: 100%;
@@ -242,17 +255,6 @@ $factor: 5) {
     }
 }
 
-#about > section {
-    background-color: $color-pane-1;
-}
-
-#services > section {
-    background-color: $color-pane-2;
-}
-
-#contact > section {
-    background-color: $color-pane-3;
-}
 
 .g-arr {
     a {
@@ -303,4 +305,52 @@ section.service-area {
             list-style: none;
         }
     }
+}
+
+blockquote {
+    border-left: none;
+    margin: 0 auto;
+    max-width: 500px;
+    &:before {
+        color: transparentize(#ccc, 1 - 0.7);
+        content: open-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.45em;
+    }
+
+    p:after{
+        color: transparentize(#ccc, 1 - 0.7);
+        content: close-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-left: 0.25em;
+        vertical-align: -0.5em;
+    }
+    P{
+        display: inline;
+    }
+    > footer {
+        color: transparentize($color-fg, 1 - 0.70);
+        text-align: right;
+    }
+}
+
+.like-h3{
+    margin-top: 1.17em;
+    margin-bottom: 1.17em;
+}
+
+h4.slist{
+    display: block;
+    &:first-child{
+        margin-top: 1.17em;
+    }
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.h3-padding-top{
+    padding-top: 1.17em;
 }
