@@ -282,7 +282,7 @@ section.service-area {
             @include column-maker(2);
             padding-left: 0em;
             >li {
-                text-align: center;
+                //text-align: center;
             }
         }
         @include mq($bp-ssmall,
@@ -291,14 +291,14 @@ section.service-area {
             25%);
             padding-left: 0em;
             >li {
-                text-align: center;
+                //text-align: center;
             }
         }
         @include mq($from: $bp-medium) {
             @include column-maker(3);
             padding-left: 0em;
             >li {
-                text-align: center;
+                //text-align: center;
             }
         }
         li {
@@ -362,4 +362,19 @@ h4.slist{
 div.mid-spacer{
     padding: 0.25em;
     width: 100%;
+}
+
+
+.center-align-xs{
+    text-align: inherit;
+    @include mq($to: $bp-ssmall){
+        text-align: center;
+    }
+}
+
+.center-align-sm{
+    text-align: inherit;
+    @include mq($from: $bp-ssmall + 1, $to: $bp-small){
+        text-align: center;
+    }
 }
