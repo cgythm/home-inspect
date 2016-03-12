@@ -10,8 +10,9 @@ $color-active-border: white;
 $color-pane-1: rgb(23, 58, 122);
 $color-pane-2: rgb(125, 155, 209);
 $color-pane-3: rgb(238, 238, 238);
-$base-padding: 30px;
+$base-padding: 15px;
 $padding-in-between: 20px;
+$bradius: 6px;
 html {
     &.wf-active {
         &,
@@ -58,7 +59,6 @@ svg#work-services {
 
 svg#scrollar {}
 
-
 #about > section {
     background-color: $color-pane-1;
 }
@@ -71,7 +71,6 @@ svg#scrollar {}
     background-color: mix($color-pane-1, $color-pane-1, 0%);
     color: $color-bg;
 }
-
 
 div.cover {
     //one CSS 'type': a site-wrapper
@@ -205,7 +204,8 @@ div.cover {
 
 @mixin section-padding($base-padding,
 $padding-in-between,
-$factor: 5) {
+$factor: 5,
+$radius: $base-padding / $factor) {
     &:first-child {
         margin-top: 10px;
         margin-bottom: $base-padding/2;
@@ -213,7 +213,7 @@ $factor: 5) {
     margin-top: $base-padding/2;
     margin-bottom: $base-padding/2;
     padding: $base-padding;
-    border-radius: $base-padding / $factor;
+    border-radius: $radius;
     & + section {
         margin-top: ($base-padding) + $padding-in-between;
     }
@@ -240,21 +240,22 @@ $factor: 5) {
             padding-top: 15px;
             > section {
                 @media(min-width: $bp-small+1) {
-                    @include section-padding($base-padding, $padding-in-between);
+                    @include section-padding(0, $padding-in-between, $radius: $bradius);
                 }
                 @media(max-width: $bp-small) {
                     @include section-padding($base-padding - 10,
                     $padding-in-between - 5,
-                    3);
+                    3,
+                    $radius: $bradius);
                 }
             }
+
             &:last-child {
                 padding-bottom: 15px;
             }
         }
     }
 }
-
 
 .g-arr {
     a {
@@ -319,8 +320,7 @@ blockquote {
         margin-right: 0.25em;
         vertical-align: -0.45em;
     }
-
-    p:after{
+    p:after {
         color: transparentize(#ccc, 1 - 0.7);
         content: close-quote;
         font-size: 3em;
@@ -328,7 +328,7 @@ blockquote {
         margin-left: 0.25em;
         vertical-align: -0.5em;
     }
-    P{
+    P {
         display: inline;
     }
     > footer {
@@ -337,44 +337,58 @@ blockquote {
     }
 }
 
-.like-h3{
+.like-h3 {
     margin-top: 1.17em;
     margin-bottom: 1.17em;
 }
 
-h4.slist{
+h4.slist {
     display: block;
-    &:first-child{
+    &:first-child {
         margin-top: 1.17em;
     }
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.list{
+.list {
     //text-align: center;
 }
-.h3-padding-top{
+
+.h3-padding-top {
     padding-top: 1.17em;
 }
 
-
-div.mid-spacer{
+div.mid-spacer {
     padding: 0.25em;
     width: 100%;
 }
 
-
-.center-align-xs{
+.center-align-xs {
     text-align: inherit;
-    @include mq($to: $bp-ssmall){
+    @include mq($to: $bp-ssmall) {
         text-align: center;
     }
 }
 
-.center-align-sm{
+.center-align-sm {
     text-align: inherit;
-    @include mq($from: $bp-ssmall + 1, $to: $bp-small){
+    @include mq($from: $bp-ssmall + 1, $to: $bp-small) {
         text-align: center;
+    }
+}
+
+.no-padding{
+
+}
+
+.smsx-center {
+    > li {
+        @include mq($from: $bp-ssmall + 1, $to: $bp-small) {
+            //text-align: center;
+        }
+        @include mq($to: $bp-ssmall) {
+          //  text-align: center;
+        }
     }
 }
