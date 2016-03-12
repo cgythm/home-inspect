@@ -45,7 +45,9 @@ svg#home-about {
     height: auto;
     display: block;
     margin: 0 auto;
-    transform: translateX(-12%);
+    @include mq($from: $bp-small + 1){
+        transform: translateX(-12%);
+    }
 }
 
 svg#work-services {
@@ -240,7 +242,7 @@ $radius: $base-padding / $factor) {
             padding-top: 15px;
             > section {
                 @media(min-width: $bp-small+1) {
-                    @include section-padding(0, $padding-in-between, $radius: $bradius);
+                    @include section-padding($base-padding, $padding-in-between, $radius: $bradius);
                 }
                 @media(max-width: $bp-small) {
                     @include section-padding($base-padding - 10,
@@ -379,7 +381,15 @@ div.mid-spacer {
 }
 
 .no-padding{
+    padding: 0 !important;
+}
 
+.no-padding-left{
+    padding-left:  0 !important;
+}
+
+.h2-like-padding{
+    margin: .75em 0;
 }
 
 .smsx-center {
