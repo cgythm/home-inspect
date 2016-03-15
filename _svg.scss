@@ -1,0 +1,44 @@
+
+@import "_constants.scss";
+@import "_helpers.scss";
+
+svg#phone-link {
+    width: 16pt;
+    height: 16pt;
+    transform: translateY(10%);
+    fill: transparentize($color-fg, 1-0.75);
+}
+
+svg#home-about {
+    fill: transparentize($color-pane-3, 1-0.9);
+    width: 252px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    @include mq($from: $bp-small + 1) {
+        transform: translateX(-12%);
+    }
+    @include mq($to: $bp-small) {
+        transform: translateX(-25px);
+    }
+}
+
+svg#work-services {
+    fill: transparentize($color-bg, 1-0.75);
+    width: 252px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    //transform: translateX(-12%);
+}
+
+svg#scrollar {}
+
+svg#email {
+    > path {
+        fill: transparentize($color-pane-3, 1-0.9);
+    }
+    display: block;
+}
+
+svg#phone {}

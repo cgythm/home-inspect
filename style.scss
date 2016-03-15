@@ -1,18 +1,6 @@
 @import "_helpers.scss";
-$bp-ssmall: 480px;
-$bp-small: 768px;
-$bp-medium: 992px;
-$internal-dimension: 700px;
-$color-bg: rgb(17, 29, 53);
-$color-fg: white;
-$color-active: white;
-$color-active-border: white;
-$color-pane-1: rgb(23, 58, 122);
-$color-pane-2: rgb(125, 155, 209);
-$color-pane-3: rgb(238, 238, 238);
-$base-padding: 15px;
-$padding-in-between: 20px;
-$bradius: 6px;
+@import "_constants.scss";
+
 html {
     &.wf-active {
         &,
@@ -45,8 +33,11 @@ svg#home-about {
     height: auto;
     display: block;
     margin: 0 auto;
-    @include mq($from: $bp-small + 1){
+    @include mq($from: $bp-small + 1) {
         transform: translateX(-12%);
+    }
+    @include mq($to: $bp-small) {
+        transform: translateX(-25px);
     }
 }
 
@@ -61,18 +52,48 @@ svg#work-services {
 
 svg#scrollar {}
 
-#about > section {
-    background-color: $color-pane-1;
+svg#email {
+    > path {
+        fill: transparentize($color-pane-3, 1-0.9);
+    }
+    display: block;
 }
 
-#services > section {
-    background-color: $color-pane-2;
+svg#phone {}
+
+#about {
+    > section {
+        background-color: $color-pane-1;
+    }
 }
 
-#contact > section {
-    background-color: mix($color-pane-1, $color-pane-1, 0%);
-    color: $color-bg;
+#services {
+    > section {
+        background-color: $color-pane-2;
+    }
+
+    a{
+        color: inherit;    //can't use inheirt because border-bottom's 'inherit' doesn't refer to the same value.
+        padding-bottom: 0.05em;
+        border-bottom: transparentize($color-fg, 1-0.50) solid 2pt;
+        &:hover{
+            text-decoration: none;
+            border-bottom: transparentize($color-fg, 1-0.90) solid 2pt;
+
+        }
+    }
 }
+
+#contact {
+    > section {
+        background-color: mix($color-pane-1, $color-pane-1, 0%);
+        color: $color-bg;
+    }
+    a{
+
+    }
+}
+
 
 div.cover {
     //one CSS 'type': a site-wrapper
@@ -204,23 +225,6 @@ div.cover {
     }
 }
 
-@mixin section-padding($base-padding,
-$padding-in-between,
-$factor: 5,
-$radius: $base-padding / $factor) {
-    &:first-child {
-        margin-top: 10px;
-        margin-bottom: $base-padding/2;
-    }
-    margin-top: $base-padding/2;
-    margin-bottom: $base-padding/2;
-    padding: $base-padding;
-    border-radius: $radius;
-    & + section {
-        margin-top: ($base-padding) + $padding-in-between;
-    }
-}
-
 .site {
     position: relative;
     min-height: 100%;
@@ -245,13 +249,12 @@ $radius: $base-padding / $factor) {
                     @include section-padding($base-padding, $padding-in-between, $radius: $bradius);
                 }
                 @media(max-width: $bp-small) {
-                    @include section-padding($base-padding - 10,
+                    @include section-padding($base-padding/2,
                     $padding-in-between - 5,
                     3,
                     $radius: $bradius);
                 }
             }
-
             &:last-child {
                 padding-bottom: 15px;
             }
@@ -367,29 +370,30 @@ div.mid-spacer {
 }
 
 .center-align-xs {
-    text-align: inherit;
+    //text-align: inherit;
     @include mq($to: $bp-ssmall) {
         text-align: center;
     }
 }
 
 .center-align-sm {
-    text-align: inherit;
+    //text-align: inherit;
     @include mq($from: $bp-ssmall + 1, $to: $bp-small) {
         text-align: center;
     }
 }
 
-.no-padding{
+.no-padding {
     padding: 0 !important;
 }
 
-.no-padding-left{
-    padding-left:  0 !important;
+.no-padding-left {
+    padding-left: 0 !important;
 }
 
-.h2-like-padding{
-    margin: .75em 0;
+.h2-like-margin {
+    //margin: .75rem 0;
+    margin: 1.125em 0; //why? font-size: 1.5em, margin .75em. margin val is 1.5 * 0.75 = 1.125em;
 }
 
 .smsx-center {
@@ -398,7 +402,32 @@ div.mid-spacer {
             //text-align: center;
         }
         @include mq($to: $bp-ssmall) {
-          //  text-align: center;
+            //  text-align: center;
         }
     }
 }
+
+div.service-area {
+    &.s {
+        &:nth-child(3n-1) {
+            text-align: center;
+        }
+        &:nth-child(3n) {
+            text-align: right;
+        }
+    }
+}
+
+.area-served-title {
+    @include mq($to: $bp-small) {
+        margin-bottom: 0px;
+    }
+}
+
+
+/*#contact{
+    min-height: 100vh;
+    > section{
+        min-height: 100%;
+    }
+}*/

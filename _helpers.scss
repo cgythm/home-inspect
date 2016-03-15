@@ -36,3 +36,21 @@
         }
     }
 }
+
+@mixin section-padding($base-padding,
+$padding-in-between,
+$factor: 5,
+$radius: $base-padding / $factor) {
+    /*&:first-child {
+        margin-top: 10px;
+        margin-bottom: $base-padding/2;
+    }*/
+    margin-top: $base-padding/2;
+    margin-bottom: $base-padding/2;
+    padding: $base-padding;
+    border-radius: $radius;
+    & + section {
+        margin-top: ($base-padding) + $padding-in-between;
+    }
+}
+
