@@ -1,0 +1,2 @@
+### SVG
+To do scaling of an svg image, viewbox needs to be specified. The viewbox defines what is the SVG canvas (artboard) area and when scaling happens, it scales the viewbox to the viewport of the svg. if no viewbox is specified, the viewbox is clipped to the bounds of the viewport.

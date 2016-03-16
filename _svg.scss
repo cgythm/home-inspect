@@ -1,7 +1,5 @@
-
 @import "_constants.scss";
 @import "_helpers.scss";
-
 svg#phone-link {
     width: 16pt;
     height: 16pt;
@@ -39,6 +37,19 @@ svg#email {
         fill: transparentize($color-pane-3, 1-0.9);
     }
     display: block;
+    max-width: 252px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
-svg#phone {}
+svg#phone-contact {
+    display: block;
+    max-width: 100%;
+    width: 252px;
+    height: auto;
+    margin: 0 auto;
+    #phone path, & > path, & > use {
+        fill: transparentize($color-pane-3, 1-0.9);
+    }
+}
